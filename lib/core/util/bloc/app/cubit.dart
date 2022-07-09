@@ -81,6 +81,7 @@ class AppBloc extends Cubit<AppStetes> {
   void deleteUser({required Map user}) async{
     selectedUser = user;
     await database.rawDelete('DELETE FROM users WHERE name = ?', [selectedUser['name']]);
+    selectedUser = {};
     emit(AppDeleteUser());
     getUsersData();
   }

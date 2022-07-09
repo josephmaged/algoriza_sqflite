@@ -29,6 +29,21 @@ class UsersWidget extends StatelessWidget {
                     border: const OutlineInputBorder(),
                     labelText: 'Username'),
               ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Swipe left to delete',
+                  style: TextStyle(
+                    color: Colors.red
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
               Expanded(
                 child: RefreshIndicator(
                   onRefresh: () async {
